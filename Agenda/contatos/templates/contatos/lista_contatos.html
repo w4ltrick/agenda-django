@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de Contatos</title>
+    <style>
+      /* Resetando margens e padding */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Corpo da página */
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f1f4f8;
+        color: #333;
+        line-height: 1.6;
+        padding: 0;
+        margin: 0;
+      }
+
+      /* Título */
+      h1 {
+        text-align: center;
+        margin-top: 60px;
+        font-size: 36px;
+        font-weight: 600;
+        color: #2c3e50;
+      }
+
+      /* Lista de contatos */
+      ul {
+        list-style: none;
+        padding: 0;
+        max-width: 600px;
+        margin: 30px auto;
+      }
+
+      li {
+        background: #fff;
+        margin: 15px 0;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+      }
+
+      li:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      a {
+        text-decoration: none;
+        font-size: 20px;
+        color: #3498db;
+        font-weight: 500;
+        transition: color 0.3s ease;
+      }
+
+      a:hover {
+        color: #2980b9;
+      }
+
+      /* Botão Voltar */
+      .btn-voltar {
+        display: inline-block;
+        padding: 12px 24px;
+        margin-top: 30px;
+        background-color: #3498db;
+        color: white;
+        font-size: 18px;
+        border-radius: 8px;
+        text-decoration: none;
+        text-align: center;
+        transition: all 0.3s ease-in-out;
+      }
+
+      .btn-voltar:hover {
+        background-color: #2980b9;
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .btn-voltar:active {
+        background-color: #1d6188;
+      }
+
+      /* Responsividade */
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 30px;
+        }
+
+        li {
+          padding: 15px;
+        }
+
+        a {
+          font-size: 18px;
+        }
+
+        .btn-voltar {
+          font-size: 16px;
+          padding: 10px 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Lista de Contatos</h1>
+    <ul>
+      {% for contato in contatos %}
+        <li>
+          <a href="{% url 'detalhes_contato' contato.id %}">
+            {{ contato.nome }} - {{ contato.telefone }}
+          </a>
+        </li>
+      {% empty %}
+        <li>Nenhum contato cadastrado.</li>
+      {% endfor %}
+    </ul>
+    <a href="{% url 'home' %}" class="btn-voltar">Voltar</a>
+  </body>
+</html>

@@ -1,0 +1,5 @@
+id,nome,telefone,email,endereco
+1,João Silva,9988776655,joao.silva@email.com,Avenida Brasil, 1500
+2,Maria Oliveira,9933445566,maria.oliveira@email.com,Rua das Flores, 22
+3,Carlos Souza,9777888999,carlos.souza@email.com,Rua do Sol, 58
+4,Ana Pereira,9666332244,ana.pereira@email.com,Rua São João, 202
