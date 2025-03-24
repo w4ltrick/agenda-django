@@ -25,9 +25,33 @@
         height: 100vh;
       }
 
+      .navbar {
+        width: 100%;
+        background-color: #1b5e20; /* Verde mais escuro */
+        padding: 15px 0;
+        text-align: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .navbar a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        margin: 0 15px;
+        font-weight: 500;
+        transition: color 0.3s ease;
+      }
+
+      .navbar a:hover {
+        color: #66bb6a; /* Verde claro */
+      }
+
       h1 {
         text-align: center;
-        margin-top: 60px;
+        margin-top: 80px;
         font-size: 36px;
         font-weight: 600;
       }
@@ -110,6 +134,12 @@
     </style>
   </head>
   <body>
+    <div class="navbar">
+      <a href="{% url 'home' %}">Home</a>
+      <a href="#">Sobre</a>
+      <a href="{% url 'lista_contatos' %}">Contatos</a>
+    </div>
+
     <h1>Lista de Contatos</h1>
     <ul>
       {% for contato in contatos %}
