@@ -5,18 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lista de Contatos</title>
     <style>
-      /* Resetando margens e padding */
       * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
       }
 
-      /* Corpo da página */
       body {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background-color: #f1f4f8;
-        color: #333;
+        background-color: #2e7d32; /* Verde escuro */
+        color: white;
         line-height: 1.6;
         padding: 0;
         margin: 0;
@@ -27,16 +25,13 @@
         height: 100vh;
       }
 
-      /* Título */
       h1 {
         text-align: center;
         margin-top: 60px;
         font-size: 36px;
         font-weight: 600;
-        color: #2c3e50;
       }
 
-      /* Lista de contatos */
       ul {
         list-style: none;
         padding: 0;
@@ -45,12 +40,13 @@
       }
 
       li {
-        background: #fff;
+        background: white;
         margin: 15px 0;
         padding: 20px;
         border-radius: 8px;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+        color: black;
       }
 
       li:hover {
@@ -61,21 +57,20 @@
       a {
         text-decoration: none;
         font-size: 20px;
-        color: #3498db;
+        color: #1b5e20; /* Verde mais escuro */
         font-weight: 500;
         transition: color 0.3s ease;
       }
 
       a:hover {
-        color: #2980b9;
+        color: #388e3c; /* Verde médio */
       }
 
-      /* Botão Voltar */
       .btn-voltar {
         display: inline-block;
         padding: 12px 24px;
         margin-top: 30px;
-        background-color: #3498db;
+        background-color: #388e3c; /* Verde médio */
         color: white;
         font-size: 18px;
         border-radius: 8px;
@@ -85,16 +80,15 @@
       }
 
       .btn-voltar:hover {
-        background-color: #2980b9;
+        background-color: #1b5e20; /* Verde mais escuro */
         transform: translateY(-3px);
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
       }
 
       .btn-voltar:active {
-        background-color: #1d6188;
+        background-color: #104d1f;
       }
 
-      /* Responsividade */
       @media (max-width: 768px) {
         h1 {
           font-size: 30px;
